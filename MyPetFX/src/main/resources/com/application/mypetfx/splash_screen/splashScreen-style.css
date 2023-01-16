@@ -1,0 +1,10 @@
+.stage {
+    -fx-background-color: white;
+}
+
+.title {
+    -fx-background-color: #FFD66B;
+    -fx-border-color:black;
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+}

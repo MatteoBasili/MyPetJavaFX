@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="stage" stylesheets="@splashScreen-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.splash_screen.SplashScreen">
+   <children>
+      <HBox alignment="CENTER" layoutX="104.0" layoutY="212.0" prefHeight="211.0" prefWidth="292.0" styleClass="stage" stylesheets="@splashScreen-style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <children>
+            <ImageView fitHeight="213.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../UI%20prototypes/Icone%20e%20immagini/animali-domestici.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="189.0" layoutY="32.0" prefHeight="79.0" prefWidth="222.0" styleClass="title" stylesheets="@splashScreen-style.css" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="102.0" prefWidth="198.0" text="MyPet" textAlignment="CENTER" textFill="#834141">
+               <font>
+                  <Font name="Georgia Pro Cond Semibold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
