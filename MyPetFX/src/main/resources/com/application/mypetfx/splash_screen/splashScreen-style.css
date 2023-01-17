@@ -1,10 +1,35 @@
+{
+    color1: #834141;
+    color2: #FFD66B
+}
+
 .stage {
     -fx-background-color: white;
+    -fx-border-color: color1;
+    -fx-border-width: 20;
+    -fx-border-style: solid;
+}
+
+.picture-frame {
+    -fx-border-color: color2;
+    -fx-border-width: 5;
+    -fx-border-style: solid;
 }
 
 .title {
-    -fx-background-color: #FFD66B;
-    -fx-border-color:black;
-    -fx-border-width: 0.5;
+    -fx-background-color: color2;
+    -fx-border-color: black;
+    -fx-border-width: 1;
     -fx-border-style: solid;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+            from 0px .75em to .75em 0px,
+            repeat,
+            color1 0%,
+            color1 60%,
+            derive(color2, 0%) 0%,
+            derive(color2, 0%) 40%
+    );
 }

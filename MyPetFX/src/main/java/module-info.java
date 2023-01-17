@@ -5,4 +5,6 @@ module com.application.mypetfx {
 
     opens com.application.mypetfx to javafx.fxml;
     exports com.application.mypetfx;
+    exports com.application.mypetfx.splash_screen;
+    opens com.application.mypetfx.splash_screen to javafx.fxml;
 }
