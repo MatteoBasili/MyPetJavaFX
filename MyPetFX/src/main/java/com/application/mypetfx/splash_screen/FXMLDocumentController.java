@@ -1,6 +1,5 @@
 package com.application.mypetfx.splash_screen;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -20,13 +19,6 @@ public class FXMLDocumentController implements Initializable {
     private ProgressBar progressBar;
 
     public static ProgressBar statProgressBar;
-
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-
-
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

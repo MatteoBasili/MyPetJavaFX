@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.Objects;
+
 public class MyPreloader extends Preloader {
 
     private Stage preloaderStage;
@@ -19,13 +21,13 @@ public class MyPreloader extends Preloader {
     @Override
     public void init() throws Exception {
 
-        Parent root1 = FXMLLoader.load(getClass().getResource("splashScreen.fxml"));
+        Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("splashScreen.fxml")));
         scene = new Scene(root1);
 
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         this.preloaderStage = primaryStage;
 
@@ -41,7 +43,6 @@ public class MyPreloader extends Preloader {
 
         if (info instanceof ProgressNotification) {
             FXMLDocumentController.label.setText("Loading " + (int) (((ProgressNotification) info).getProgress() * 100) + "%");
-            System.out.println("Value@ :" + ((ProgressNotification) info).getProgress());
             FXMLDocumentController.statProgressBar.setProgress(((ProgressNotification) info).getProgress());
         }
 
@@ -51,14 +52,8 @@ public class MyPreloader extends Preloader {
     public void handleStateChangeNotification(Preloader.StateChangeNotification info) {
 
         StateChangeNotification.Type type = info.getType();
-        switch (type) {
-
-            case BEFORE_START:
-                // Called after MyApplication#init and before MyApplication#start is called.
-                System.out.println("BEFORE_START");
-                preloaderStage.hide();
-                break;
-
+        if (Objects.requireNonNull(type) == StateChangeNotification.Type.BEFORE_START) {// Called after MyApplication#init and before MyApplication#start is called.
+            preloaderStage.hide();
         }
 
     }

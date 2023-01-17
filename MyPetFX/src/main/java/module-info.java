@@ -1,6 +1,7 @@
 module com.application.mypetfx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.application.mypetfx to javafx.fxml;

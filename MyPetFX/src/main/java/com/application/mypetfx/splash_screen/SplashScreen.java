@@ -5,10 +5,9 @@ import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.util.Objects;
 
 public class SplashScreen extends Application {
 
@@ -16,7 +15,7 @@ public class SplashScreen extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLDocument.fxml")));
 
         Scene scene = new Scene(root);
 
@@ -35,7 +34,6 @@ public class SplashScreen extends Application {
         // Perform some heavy lifting (i.e. database start, check for application updates, etc.)
         for (int i = 1; i <= COUNT_LIMIT; i++) {
             double progress = (double) i/100;
-            System.out.println("progress: " + progress);
             notifyPreloader(new Preloader.ProgressNotification(progress));
             Thread.sleep(50);
         }
@@ -43,7 +41,7 @@ public class SplashScreen extends Application {
     }
 
     /**
-     * @param args the coomand line arguments
+     * @param args the command line arguments
      */
     public static void main(String[] args) {
 
