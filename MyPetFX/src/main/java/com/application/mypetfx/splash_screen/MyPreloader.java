@@ -4,6 +4,7 @@ import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -13,6 +14,7 @@ public class MyPreloader extends Preloader {
 
     private Stage preloaderStage;
     private Scene scene;
+    private Image appIcon;
 
     public MyPreloader() {
 
@@ -23,6 +25,7 @@ public class MyPreloader extends Preloader {
 
         Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("splashScreen.fxml")));
         scene = new Scene(root1);
+        appIcon = new Image("D:\\Matteo\\ISPW-E-BD\\ISPW\\2021-22\\Progetto\\CODICE\\JavaFX\\Codice\\MyPetFX\\src\\main\\resources\\com\\application\\mypetfx\\icons\\app_icon.png");
 
     }
 
@@ -30,6 +33,7 @@ public class MyPreloader extends Preloader {
     public void start(Stage primaryStage) {
 
         this.preloaderStage = primaryStage;
+        preloaderStage.getIcons().add(appIcon);
 
         // Set preloader scene and show stage.
         preloaderStage.setScene(scene);
@@ -42,8 +46,8 @@ public class MyPreloader extends Preloader {
     public void handleApplicationNotification(Preloader.PreloaderNotification info) {
 
         if (info instanceof ProgressNotification) {
-            FXMLDocumentController.label.setText("Loading " + (int) (((ProgressNotification) info).getProgress() * 100) + "%");
-            FXMLDocumentController.statProgressBar.setProgress(((ProgressNotification) info).getProgress());
+            SplashScreenController.label.setText("Loading " + (int) (((ProgressNotification) info).getProgress() * 100) + "%");
+            SplashScreenController.statProgressBar.setProgress(((ProgressNotification) info).getProgress());
         }
 
     }

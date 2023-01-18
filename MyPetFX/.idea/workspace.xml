@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
+    "last_opened_file_path": "D:/Matteo/ISPW-E-BD/ISPW/2021-22/Progetto/CODICE/JavaFX/Codice/MyPetFX/src/main/resources/com/application/mypetfx/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,26 +49,32 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\images" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\java\com\application\mypetfx\utils\exceptions" />
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\login\view" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\login" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\splash_screen" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.application.mypetfx.splash_screen" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SplashScreen">
-    <configuration name="MyPreloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.application.mypetfx.splash_screen.MyPreloader" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.application.mypetfx.login.view.Main" />
       <module name="MyPetFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.application.mypetfx.splash_screen.*" />
+          <option name="PATTERN" value="com.application.mypetfx.login.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SplashScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.application.mypetfx.splash_screen.SplashScreen" />
+    <configuration name="MyPreloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.application.mypetfx.splash_screen.MyPreloader" />
       <module name="MyPetFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.application.mypetfx.splash_screen.*" />
+          <option name="PATTERN" value="com.application.mypetfx.login.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,7 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SplashScreen" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MyPreloader" />
       </list>
     </recent_temporary>
@@ -107,7 +113,7 @@
       <workItem from="1673822863947" duration="152000" />
       <workItem from="1673889340709" duration="19985000" />
       <workItem from="1673919788867" duration="426000" />
-      <workItem from="1673947889524" duration="6631000" />
+      <workItem from="1673947889524" duration="47795000" />
     </task>
     <servers />
   </component>

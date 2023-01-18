@@ -3,6 +3,8 @@ package com.application.mypetfx.login;
 import com.application.mypetfx.login.data.LoginCredentials;
 import com.application.mypetfx.login.data.LoginInteractor;
 
+import java.util.prefs.BackingStoreException;
+
 public class LoginPresenter implements LoginContract.LoginListener {
 
     private final LoginInteractor loginInteractor;
@@ -14,17 +16,17 @@ public class LoginPresenter implements LoginContract.LoginListener {
     }
 
     public void login(LoginCredentials credentials) {
-        this.loginView.showProgressbar();
+        this.loginView.showProgressIndicator();
         this.loginInteractor.login(credentials);
     }
 
-    public void onSuccess(int role) {
-        this.loginView.hideProgressbar();
+    public void onSuccess(int role) throws BackingStoreException {
+        this.loginView.hideProgressIndicator();
         this.loginView.onSuccess(role);
     }
 
     public void onFailed(String message) {
-        this.loginView.hideProgressbar();
+        this.loginView.hideProgressIndicator();
         this.loginView.onFailed(message);
     }
 

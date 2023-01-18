@@ -3,22 +3,19 @@ package com.application.mypetfx.utils.db;
 import java.sql.*;
 import java.util.Properties;
 
+import com.application.mypetfx.utils.properties.AppProperties;
+import org.apache.log4j.Logger;
+
 public class DBProfile {
 
+    private static final Logger logger = Logger.getLogger(DBProfile.class);
     private static final String SQL_EXCEPTION = "SQL Error: ";
-    private final String db = BuildConfig.DB_NAME;
-    private final String ip = BuildConfig.IP_ADDRESS;
-    private final String port = BuildConfig.DB_PORT;
-    private String timeout = "500";
-    private final String username = BuildConfig.DB_USERNAME;
-    private final String watchword = BuildConfig.DB_WATCHWORD;
 
-    public DBProfile() {
-    }
-
-    public DBProfile(String timeout2) {
-        this.timeout = timeout2;
-    }
+    private final String ip = AppProperties.getInstance().getProperty("DB_IP_ADDRESS");
+    private final String port = AppProperties.getInstance().getProperty("DB_PORT");
+    private final String db = AppProperties.getInstance().getProperty("DB_NAME");
+    private final String username = AppProperties.getInstance().getProperty("DB_USERNAME");
+    private final String watchword = AppProperties.getInstance().getProperty("DB_WATCHWORD");
 
     public String getIp() {
         return this.ip;
@@ -41,27 +38,29 @@ public class DBProfile {
     }
 
     public Connection getConnection() {
+        Connection connection = null;
+        String connectionURL;
         try {
-            DriverManager.registerDriver(new Driver());
-            String connectionURL = "jdbc:mysql://" + getIp() + ":" + getPort() + "/" + getDb() + "?user=" + getUsername() + "&password=" + getWatchword();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connectionURL = "jdbc:mysql://" + getIp() + ":" + getPort() + "/" + getDb() + "?user=" + getUsername() + "&password=" + getWatchword();
             Properties properties = new Properties();
-            properties.put("connectTimeout", this.timeout);
-            return DriverManager.getConnection(connectionURL, properties);
+            String timeout = "500";
+            properties.put("connectTimeout", timeout);
+            connection = DriverManager.getConnection(connectionURL, properties);
         } catch (SQLException se) {
-            System.out.println("");
-            Log.e(SQL_EXCEPTION, se.getMessage());
-            return null;
+            logger.error(SQL_EXCEPTION, se);
         } catch (Exception e) {
-            Log.e("Error: ", e.getMessage());
-            return null;
+            logger.error("Error: ", e);
         }
+
+        return connection;
     }
 
     public void closeStatement(CallableStatement stmt) {
         try {
             stmt.close();
         } catch (SQLException e) {
-            Log.e(SQL_EXCEPTION, e.getMessage());
+            logger.error(SQL_EXCEPTION, e);
         }
     }
 
@@ -69,7 +68,7 @@ public class DBProfile {
         try {
             con.close();
         } catch (SQLException e) {
-            Log.e(SQL_EXCEPTION, e.getMessage());
+            logger.error(SQL_EXCEPTION, e);
         }
     }
 

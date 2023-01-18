@@ -1,0 +1,26 @@
+{
+    color1: #834141;
+    color2: #FFD66B
+}
+
+.custom-text-color {
+    -fx-text-fill: red;
+}
+
+.login-google {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0.3;
+    -fx-border-style: solid;
+}
+
+.enter-button {
+    -fx-background-color: color2;
+    -fx-border-color: black;
+    -fx-border-width: 0.3;
+    -fx-border-style: solid;
+}
+
+.progress-bar {
+    -fx-progress-color: color1;
+}
