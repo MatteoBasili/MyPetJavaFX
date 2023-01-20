@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="620.0" styleClass="stage" stylesheets="@splashScreen-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.splash_screen.SplashScreenController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="620.0" styleClass="stage" stylesheets="@../styles/splashScreen-style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.splash_screen.SplashScreenController">
    <Pane layoutX="11.0" layoutY="16.0" prefHeight="452.0" prefWidth="600.0">
       <Label fx:id="progress" alignment="CENTER" layoutX="245.0" layoutY="203.0" prefHeight="19.0" prefWidth="110.0">
          <font>
@@ -26,14 +26,14 @@
             <Image url="@../images/animali-domestici-10-800x400-1.jpg" />
          </ImageView>
       </HBox>
-      <ProgressBar fx:id="progressBar" layoutX="155.0" layoutY="230.0" prefHeight="18.0" prefWidth="290.0" progress="0.0" stylesheets="@splashScreen-style.css" />
-      <HBox alignment="CENTER" layoutX="190.0" layoutY="22.0" prefHeight="75.0" prefWidth="222.0" styleClass="title" stylesheets="@splashScreen-style.css">
+      <ProgressBar fx:id="progressBar" layoutX="155.0" layoutY="230.0" prefHeight="18.0" prefWidth="290.0" progress="0.0" stylesheets="@../styles/splashScreen-style.css" />
+      <HBox alignment="CENTER" layoutX="190.0" layoutY="22.0" prefHeight="75.0" prefWidth="222.0" styleClass="app-title" stylesheets="@../styles/app-style.css">
          <Label alignment="CENTER" prefHeight="102.0" prefWidth="198.0" text="MyPet" textAlignment="CENTER" textFill="#834141">
             <font>
                <Font name="Georgia Pro Cond Semibold" size="50.0" />
             </font>
          </Label>
       </HBox>
-      <Pane layoutX="-11.0" layoutY="-16.0" prefHeight="472.0" prefWidth="620.0" styleClass="picture-frame" stylesheets="@splashScreen-style.css" />
+      <Pane layoutX="-11.0" layoutY="-16.0" prefHeight="472.0" prefWidth="620.0" styleClass="picture-frame" stylesheets="@../styles/splashScreen-style.css" />
    </Pane>
 </AnchorPane>

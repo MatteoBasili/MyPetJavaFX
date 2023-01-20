@@ -1,0 +1,15 @@
+{
+    color1: #834141;
+    color2: #FFD66B
+}
+
+.custom-text-color {
+    -fx-text-fill: red;
+}
+
+.social_buttons {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+}
