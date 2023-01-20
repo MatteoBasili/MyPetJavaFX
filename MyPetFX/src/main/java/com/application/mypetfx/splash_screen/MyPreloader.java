@@ -23,7 +23,7 @@ public class MyPreloader extends Preloader {
     @Override
     public void init() throws Exception {
 
-        Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("splashScreen.fxml")));
+        Parent root1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/application/mypetfx/fxml/splashScreen.fxml")));
         scene = new Scene(root1);
         appIcon = new Image("D:\\Matteo\\ISPW-E-BD\\ISPW\\2021-22\\Progetto\\CODICE\\JavaFX\\Codice\\MyPetFX\\src\\main\\resources\\com\\application\\mypetfx\\icons\\app_icon.png");
 

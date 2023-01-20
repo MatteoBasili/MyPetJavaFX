@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="668.5" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.login.view.LoginController">
+   <content>
+      <AnchorPane fx:id="anchorPane" prefHeight="593.0" prefWidth="667.0" styleClass="picture-frame" stylesheets="@../styles/app-style.css">
+         <children>
+            <TextField fx:id="username" layoutX="116.0" layoutY="312.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="115.0" layoutY="289.0" prefHeight="20.0" prefWidth="101.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="Username:">
+               <font>
+                  <Font name="Georgia Pro Semibold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="358.0" prefHeight="18.0" prefWidth="80.0" text="Password:">
+               <font>
+                  <Font name="Georgia Pro Semibold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="enterButton" layoutX="301.0" layoutY="470.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="65.0" styleClass="buttons" stylesheets="@../styles/app-style.css" text="Enter">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox alignment="CENTER" layoutX="273.0" layoutY="36.0" prefHeight="50.0" prefWidth="122.0" styleClass="app-title" stylesheets="@../styles/app-style.css" AnchorPane.topAnchor="35.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="49.0" prefWidth="324.0" text="MyPet" textAlignment="CENTER" textFill="#834141">
+                     <font>
+                        <Font name="Georgia Pro Cond Semibold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <CheckBox fx:id="rememberMe" layoutX="116.0" layoutY="425.0" mnemonicParsing="false" text="Remember me">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <Label fx:id="forgotPasswordText" layoutX="442.0" layoutY="425.0" styleClass="custom-text-color" stylesheets="@../styles/loginScreen-style.css" text="Forgot password?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="220.0" layoutY="145.0" text="Don't have an account?">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="105.0" prefHeight="42.0" prefWidth="256.0" text="Welcome back">
+               <font>
+                  <Font name="Georgia Pro Semibold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="392.0" layoutY="145.0" styleClass="custom-text-color" stylesheets="@../styles/loginScreen-style.css" text="Sign up">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Line endX="-58.4" endY="0.600006103515625" fill="BLUE" layoutX="503.0" layoutY="169.0" startX="-110.0" startY="0.600006103515625" stroke="RED">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Line>
+            <Button fx:id="googleButton" layoutX="116.0" layoutY="210.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" styleClass="social_buttons" stylesheets="@../styles/loginScreen-style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="140.0" layoutY="216.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Google__G__Logo.svg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="169.0" layoutY="216.0" mouseTransparent="true" text="Login with Google">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="facebookButton" layoutX="353.0" layoutY="210.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="199.0" styleClass="social_buttons" stylesheets="@../styles/loginScreen-style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="47.0" layoutX="359.0" layoutY="214.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Facebook-logo-500x313.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="399.0" layoutY="216.0" mouseTransparent="true" text="Login with Facebook">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="259.0" text="OR" />
+            <Line endX="69.20001220703125" layoutX="482.0" layoutY="267.0" startX="-129.20001220703125" />
+            <Line endX="69.20001220703125" layoutX="246.0" layoutY="267.0" startX="-129.20001220703125" />
+            <Label fx:id="showHidePasswordText" alignment="CENTER" layoutX="514.0" layoutY="358.0" styleClass="custom-text-color" stylesheets="@../styles/loginScreen-style.css" text="Show">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ProgressIndicator fx:id="progressIndicator" layoutX="316.0" layoutY="522.8" prefHeight="35.0" prefWidth="35.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" visible="false" AnchorPane.bottomAnchor="35.0" />
+            <PasswordField fx:id="hiddenPassword" layoutX="116.0" layoutY="381.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="shownPassword" layoutX="116.0" layoutY="381.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/loginScreen-style.css" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Line fx:id="fgPLine" endX="-2.0" endY="0.3" fill="BLUE" layoutX="553.0" layoutY="445.0" startX="-110.0" startY="0.3" stroke="RED">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Line>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

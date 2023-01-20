@@ -4,6 +4,7 @@ import com.application.mypetfx.login.LoginContract;
 import com.application.mypetfx.utils.db.DBProfile;
 import com.application.mypetfx.utils.exceptions.ConnectionFailedException;
 import com.application.mypetfx.utils.exceptions.InvalidInputException;
+import com.application.mypetfx.utils.input.InputValidator;
 import javafx.application.Platform;
 import org.apache.log4j.Logger;
 
@@ -38,7 +39,6 @@ public class LoginInteractor {
                 new TimerTask() {
                     @Override
                     public void run() {
-                        //here is the solution
                         Platform.runLater(() -> checkLogin(loginCredentials));
 
                     }
@@ -49,14 +49,16 @@ public class LoginInteractor {
     private boolean hasInputError(LoginCredentials loginCredentials) {
         String username = loginCredentials.getUsername();
         String password = loginCredentials.getPassword();
+
+        InputValidator validator = new InputValidator();
         try {
-            if (username.isEmpty()) {
+            if (validator.isEmpty(username)) {
                 throw new InvalidInputException("The username is empty.");
             }
-            if (password.isEmpty()) {
+            if (validator.isEmpty(password)) {
                 throw new InvalidInputException("The password is empty.");
             }
-            if (password.length() < 8 || password.length() > 32) {
+            if (validator.isValidPassword(password)) {
                 throw new InvalidInputException("The password must be between 8 and 32 characters.");
             }
             return false;

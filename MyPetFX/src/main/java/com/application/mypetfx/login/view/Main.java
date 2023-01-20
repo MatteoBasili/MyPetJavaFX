@@ -17,13 +17,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginScreen.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/application/mypetfx/fxml/loginScreen.fxml")));
         Scene scene = new Scene(root);
 
         stage.setTitle("MyPet");
 
         Image appIcon = new Image("D:\\Matteo\\ISPW-E-BD\\ISPW\\2021-22\\Progetto\\CODICE\\JavaFX\\Codice\\MyPetFX\\src\\main\\resources\\com\\application\\mypetfx\\icons\\app_icon.png");
         stage.getIcons().add(appIcon);
+
+        //stage.setResizable(false);
 
         stage.setScene(scene);
         stage.show();
@@ -36,7 +38,7 @@ public class Main extends Application {
         for (int i = 1; i <= COUNT_LIMIT; i++) {
             double progress = (double) i/100;
             notifyPreloader(new Preloader.ProgressNotification(progress));
-            Thread.sleep(0/*50*/);
+            Thread.sleep(/*50*/0);
         }
 
     }

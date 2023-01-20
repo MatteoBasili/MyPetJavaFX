@@ -1,0 +1,104 @@
+{
+    color1: #834141;
+    color2: #FFD66B
+}
+
+.app-title {
+    -fx-background-color: color2;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+}
+
+.buttons {
+    -fx-background-color: color2;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+}
+
+.text-field-input {
+    -fx-border-width: 0.5;
+    -fx-border-style: solid;
+    -fx-faint-focus-color: #8FC8FF;
+}
+
+.progress-bar {
+    -fx-progress-color: color1;
+}
+
+.picture-frame {
+    -fx-background-color: color1, color2, white ;
+    -fx-background-insets: 0, 5, 15 ;
+}
+
+/* Check Box style */
+.check-box {
+    /* default properties */
+    selected-box-color: white;
+    box-color: white;
+    mark-color: black;
+    border-color: black;
+}
+.check-box:selected > .box {
+    /* background color for selected checkbox */
+    -fx-background-color: selected-box-color;
+    -fx-border-color: border-color;
+    -fx-border-width: 1;
+    -fx-border-radius:3px;
+}
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: box-color;
+    -fx-border-color: border-color;
+    -fx-border-width: 1;
+    -fx-border-radius:3px;
+}
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: mark-color;
+    -fx-border-color: border-color;
+    -fx-border-width: 1;
+    -fx-border-radius:3px;
+}
+
+/* Combo Box style*/
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-width: 0.75;
+    -fx-font-family: system;
+    -fx-font-size: 14px;
+}
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 0.75;
+    -fx-font-family: system;
+    -fx-font-size: 14px;
+}
+.combo-box .list-cell:hover{
+    -fx-background-color: color2;
+    -fx-text-fill: black;
+    -fx-font-family: system;
+    -fx-font-size: 15px;
+}
+.combo-box-base:focused {
+    -fx-background-color: white;
+}
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0.75;
+    -fx-mark-color: black; /* arrow color */
+}
+.combo-box-base {
+    -fx-border-color: black;
+    -fx-border-width: 0.75;
+}
+.combo-box .arrow-button {
+    -fx-border-color: black;
+    -fx-border-width: 0.15;
+}

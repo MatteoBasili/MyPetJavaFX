@@ -5,16 +5,26 @@ import com.application.mypetfx.login.LoginPresenter;
 import com.application.mypetfx.login.data.LoginCredentials;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Line;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 public class LoginController implements Initializable, LoginContract.LoginView {
 
+    @FXML
+    private AnchorPane anchorPane;
     @FXML
     private CheckBox rememberMe;
     @FXML
@@ -33,35 +43,109 @@ public class LoginController implements Initializable, LoginContract.LoginView {
     private Button googleButton;
     @FXML
     private Button facebookButton;
+    @FXML
+    private Label forgotPasswordText;
+    @FXML
+    private Line fgPLine;
+    @FXML
+    private Label signUpText;
+    @FXML
+    private Line sgnPLine;
+
 
     private Preferences preferences;
     private LoginPresenter presenter;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // For "Remember me" function
         preferences = Preferences.userNodeForPackage(LoginController.class);
         if (preferences != null) {
             if (preferences.getBoolean("RememberMe", false)) {
                 username.setText(preferences.get("Username", ""));
                 hiddenPassword.setText(preferences.get("Password", ""));
+                shownPassword.setText(preferences.get("Password", ""));
                 rememberMe.setSelected(true);
             }
 
         }
 
-        /*showHidePasswordText.setOnMouseClicked(mouseEvent -> {
-            if (hiddenPassword.isVisible()) {
-                showHidePasswordText.setText("Hide");
-                shownPassword.setVisible(true);
-            } else {
-                showHidePasswordText.setText("Show");
-                hiddenPassword.setVisible(true);
+        // Initialize "show/hide password" function
+        hiddenPassword.textProperty().bindBidirectional(shownPassword.textProperty());
+        showHidePasswordText.setOnMouseClicked(e -> showPassword());
+
+        // Initialize "forgot password" function
+        forgotPasswordText.setOnMouseClicked(e -> {
+            try {
+                showForgotPasswordScreen();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
             }
-        });*/
+        });
+        fgPLine.setOnMouseClicked(e -> {
+            try {
+                showForgotPasswordScreen();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        // Initialize "sign up" function
+        signUpText.setOnMouseClicked(e -> {
+            try {
+                showSignUpScreen();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        sgnPLine.setOnMouseClicked(e -> {
+            try {
+                showSignUpScreen();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
         googleButton.setOnAction(this::handleSocialLoginButton);
         facebookButton.setOnAction(this::handleSocialLoginButton);
         enterButton.setOnAction(this::handleLoginButton);
         presenter = new LoginPresenter(this);
+    }
+
+    @FXML
+    private void showPassword() {
+        if (showHidePasswordText.getText().equals("Show")) {
+            showHidePasswordText.setText("Hide");
+            showHidePasswordText.setTranslateX(5);
+            shownPassword.setVisible(true);
+            hiddenPassword.setVisible(false);
+            showHidePasswordText.requestFocus();   // For remove text highlight
+        } else {
+            showHidePasswordText.setText("Show");
+            showHidePasswordText.setTranslateX(-1);
+            hiddenPassword.setVisible(true);
+            shownPassword.setVisible(false);
+            showHidePasswordText.requestFocus();   // For remove text highlight
+        }
+
+    }
+
+    @FXML
+    private void showForgotPasswordScreen() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/application/mypetfx/fxml/pwdRecovery.fxml")));
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void showSignUpScreen() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/application/mypetfx/fxml/registrationScrollBar.fxml")));
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -74,6 +158,8 @@ public class LoginController implements Initializable, LoginContract.LoginView {
 
     @FXML
     private void handleLoginButton(ActionEvent event) {
+        enterButton.setDisable(true);
+
         String usernameInput = username.getText().trim();
         String passwordInput = hiddenPassword.getText().trim();
 
@@ -87,6 +173,7 @@ public class LoginController implements Initializable, LoginContract.LoginView {
     @Override
     public void showProgressIndicator() {
         progressIndicator.setVisible(true);
+        progressIndicator.requestFocus();
     }
 
     @Override
@@ -96,6 +183,7 @@ public class LoginController implements Initializable, LoginContract.LoginView {
 
     @Override
     public void onFailed(String message) {
+        enterButton.setDisable(false);
         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setHeaderText("Error");
         errorAlert.setContentText(message);
@@ -104,6 +192,8 @@ public class LoginController implements Initializable, LoginContract.LoginView {
 
     @Override
     public void onSuccess(int role) throws BackingStoreException {
+
+        enterButton.setDisable(false);
 
         if (rememberMe.isSelected()) {
             preferences.put("Username", username.getText().trim());
