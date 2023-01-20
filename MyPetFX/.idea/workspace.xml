@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Matteo/ISPW-E-BD/ISPW/2021-22/Progetto/CODICE/JavaFX/Codice/MyPetFX/src/main/resources/com/application/mypetfx/images",
+    "last_opened_file_path": "D:/Matteo/ISPW-E-BD/ISPW/2021-22/Progetto/CODICE/JavaFX/Codice/MyPetFX/src/main/java/com/application/mypetfx/utils/factory_method_example/provinces",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,22 +49,26 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\java\com\application\mypetfx\utils\factory_method_example\provinces" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\icons" />
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\images" />
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\java\com\application\mypetfx\utils\exceptions" />
-      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\fxml" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\styles" />
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\login\view" />
+      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\pwd_recovery\view" />
       <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\login" />
-      <recent name="D:\Matteo\ISPW-E-BD\ISPW\2021-22\Progetto\CODICE\JavaFX\Codice\MyPetFX\src\main\resources\com\application\mypetfx\splash_screen" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.application.mypetfx.login.view" />
       <recent name="com.application.mypetfx.splash_screen" />
     </key>
   </component>
@@ -114,6 +118,10 @@
       <workItem from="1673889340709" duration="19985000" />
       <workItem from="1673919788867" duration="426000" />
       <workItem from="1673947889524" duration="47795000" />
+      <workItem from="1674034347219" duration="35497000" />
+      <workItem from="1674119804093" duration="11396000" />
+      <workItem from="1674133227401" duration="5166000" />
+      <workItem from="1674145317196" duration="29318000" />
     </task>
     <servers />
   </component>
