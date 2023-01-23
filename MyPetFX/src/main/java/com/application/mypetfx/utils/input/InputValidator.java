@@ -10,7 +10,7 @@ public class InputValidator {
     }
 
     public boolean isValidEmail(String email) {
-        Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
+        Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-z0-9._]*@[a-zA-Z0-9]+[.][a-zA-Z]++");
         Matcher m = p.matcher(email);
         return m.find() && m.group().equals(email);
     }
