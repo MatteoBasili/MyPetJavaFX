@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.services.profile.view.PersonalInfoController">
+   <children>
+      <Label layoutX="100.0" layoutY="24.0" prefHeight="42.0" prefWidth="353.0" text="Your personal informations" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Georgia Pro Semibold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="33.0" fitWidth="33.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/arrow_back_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TextField fx:id="name" layoutX="65.0" layoutY="153.0" prefHeight="34.0" prefWidth="205.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="64.0" layoutY="130.0" prefHeight="20.0" prefWidth="101.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="First Name:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="130.0" prefHeight="19.0" prefWidth="180.0" text="Last Name:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="surname" layoutX="293.0" layoutY="153.0" prefHeight="34.0" prefWidth="205.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneNumber" layoutX="65.0" layoutY="371.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="64.0" layoutY="348.0" prefHeight="20.0" prefWidth="136.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="Phone Number:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="421.0" prefHeight="19.0" prefWidth="180.0" text="Email:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="65.0" layoutY="444.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="64.0" layoutY="494.0" prefHeight="19.0" prefWidth="442.0" text="Name of Your First Pet:                (For Password Recovery)">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstPetName" layoutX="65.0" layoutY="517.0" prefHeight="34.0" prefWidth="436.0" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="64.0" layoutY="203.0" prefHeight="20.0" prefWidth="101.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="Region:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="203.0" prefHeight="20.0" prefWidth="101.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="Province:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address" layoutX="65.0" layoutY="298.0" prefHeight="34.0" prefWidth="436.0" styleClass="text-field-input" stylesheets="@../styles/app-style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="64.0" layoutY="275.0" prefHeight="20.0" prefWidth="101.0" styleClass="text-info" stylesheets="@../styles/loginScreen-style.css" text="Address:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="regionsBox" layoutX="65.0" layoutY="226.0" prefHeight="34.0" prefWidth="205.0" stylesheets="@../styles/app-style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <ComboBox fx:id="provincesBox" layoutX="294.0" layoutY="226.0" prefHeight="34.0" prefWidth="205.0" stylesheets="@../styles/app-style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Button fx:id="saveButton" layoutX="727.0" layoutY="331.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="78.0" styleClass="buttons" stylesheets="@../styles/app-style.css" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ProgressIndicator fx:id="progressIndicator" layoutX="876.0" layoutY="71.0" prefHeight="40.0" prefWidth="40.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" />
+   </children>
+</AnchorPane>

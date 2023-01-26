@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="40.0" layoutY="24.0" prefHeight="42.0" prefWidth="60.0" text="Map" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Georgia Pro Semibold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="243.0" fitWidth="438.0" layoutX="71.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gmap_movemnt_00.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="199.0" fitWidth="214.0" layoutX="644.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Coming-Soon-pawprint-2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="182.0" fitWidth="219.0" layoutX="703.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/istockphoto-958381290-612x612.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="169.0" fitWidth="193.0" layoutX="419.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/45261468-cuidado-y-mascotas-medicina-veterinaria-concepto-como-un-grupo-de-animales-domesticados-como-un-háms.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="160.0" fitWidth="246.0" layoutX="90.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Pets-on-a-Budget-Best-Places-to-Find-Cheap-Dog-Products.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
