@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.services.profile.view.PersonalAdsController">
+   <children>
+      <Label layoutX="100.0" layoutY="24.0" prefHeight="42.0" prefWidth="120.0" text="Your ads" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Georgia Pro Semibold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="newAdButton" alignment="CENTER" contentDisplay="TOP" layoutX="445.0" layoutY="50.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="102.0" styleClass="new-button" stylesheets="@../styles/personalAdsPage-style.css" text="New ad">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/add_circle_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="back" fitHeight="33.0" fitWidth="33.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/arrow_back_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+    <AnchorPane layoutX="30.0" layoutY="149.0" minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="940.0" styleClass="list-window" stylesheets="@../styles/app-style.css">
+         <children>
+            <ProgressIndicator fx:id="loadProgressIndicator" layoutX="444.0" layoutY="187.0" prefHeight="50.0" prefWidth="50.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" />
+            <Label fx:id="noResultsText" alignment="CENTER" layoutX="388.0" layoutY="179.0" prefHeight="65.0" prefWidth="162.0" style="-fx-text-fill: gray;" text="You have not posted any ads" textAlignment="CENTER" visible="false" wrapText="true" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="388.9" AnchorPane.topAnchor="182.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

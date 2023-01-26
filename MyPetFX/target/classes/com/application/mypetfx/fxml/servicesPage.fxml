@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.services.profile.view.ServicesController">
+   <children>
+      <Label layoutX="100.0" layoutY="24.0" prefHeight="42.0" prefWidth="180.0" text="Your services" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Georgia Pro Semibold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="33.0" fitWidth="33.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/arrow_back_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="saveButton" layoutX="734.0" layoutY="286.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="78.0" styleClass="buttons" stylesheets="@../styles/app-style.css" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ProgressIndicator fx:id="progressIndicator" layoutX="876.0" layoutY="71.0" prefHeight="40.0" prefWidth="40.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" />
+      <CheckBox fx:id="service3" layoutX="110.0" layoutY="220.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="119.0" stylesheets="@../styles/app-style.css" text="Home Visit">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <CheckBox fx:id="service5" layoutX="110.0" layoutY="294.0" mnemonicParsing="false" stylesheets="@../styles/app-style.css" text="Change of Litter">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <CheckBox fx:id="service4" layoutX="110.0" layoutY="257.0" mnemonicParsing="false" stylesheets="@../styles/app-style.css" text="Walk">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <CheckBox fx:id="service1" layoutX="110.0" layoutY="146.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="176.0" stylesheets="@../styles/app-style.css" text="Pet Sitting at Home">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <CheckBox fx:id="service2" layoutX="110.0" layoutY="183.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="247.0" stylesheets="@../styles/app-style.css" text="Pet Sitting at the Pet Sitter's Home">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <Label fx:id="petSitterDescriptionText" layoutX="109.0" layoutY="369.0" prefHeight="19.0" prefWidth="442.0" text="Description of you:">
+         <font>
+            <Font name="Georgia Pro Semibold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="description" layoutX="110.0" layoutY="392.0" prefHeight="120.0" prefWidth="436.0" stylesheets="@../styles/app-style.css" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
