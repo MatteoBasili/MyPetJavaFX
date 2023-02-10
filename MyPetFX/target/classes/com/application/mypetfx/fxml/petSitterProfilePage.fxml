@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.mypetfx.services.profile.view.PetSitProfileController">
+   <children>
+      <Label layoutX="40.0" layoutY="24.0" prefHeight="42.0" prefWidth="261.0" text="Profile management" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Georgia Pro Semibold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="personalInfoButton" alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="20.0" layoutX="97.0" layoutY="374.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="150.0" styleClass="pers-info-button" stylesheets="@../styles/profile-style.css" text="Your personal informations" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Georgia Pro Semibold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/drive_file_rename_outline_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="18.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="adsButton" alignment="CENTER" contentDisplay="TOP" layoutX="316.0" layoutY="374.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="150.0" styleClass="ads-cared-serv-button" stylesheets="@../styles/profile-style.css" text="Your ads">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/pets_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="caredPetsButton" alignment="CENTER" contentDisplay="TOP" layoutX="532.0" layoutY="374.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="150.0" styleClass="ads-cared-serv-button" stylesheets="@../styles/profile-style.css" text="Your cared pets">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/sound_detection_dog_barking_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="servicesButton" alignment="CENTER" contentDisplay="TOP" layoutX="749.0" layoutY="374.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="150.0" styleClass="ads-cared-serv-button" stylesheets="@../styles/profile-style.css" text="Your services">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/work_FILL0_wght400_GRAD0_opsz48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="664.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/dislike.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="664.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/like.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="username" alignment="CENTER" layoutX="20.0" layoutY="265.0" prefHeight="32.0" prefWidth="360.0" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia Pro Semibold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="pictureFrame" layoutX="129.0" layoutY="113.0" prefHeight="140.0" prefWidth="140.0" styleClass="profile-image-picture-frame" stylesheets="@../styles/profile-style.css">
+         <children>
+            <HBox alignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <ImageView fx:id="profileImage" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <ImageView fx:id="defaultProfileImage" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../icons/blak-frame-user-profile-png-icon--cupR3D.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="loadProgressIndicator" prefHeight="35.0" prefWidth="35.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="35.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="likes" alignment="CENTER" layoutX="720.0" layoutY="144.0" prefHeight="30.0" prefWidth="92.0" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="dislikes" alignment="CENTER" layoutX="720.0" layoutY="202.0" prefHeight="30.0" prefWidth="92.0" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="savePhoto" fitHeight="30.0" fitWidth="30.0" layoutX="328.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/save_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="deletePhoto" fitHeight="30.0" fitWidth="30.0" layoutX="328.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/delete_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="changePhoto" fitHeight="30.0" fitWidth="30.0" layoutX="328.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/edit_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="374.0" layoutY="120.0" prefHeight="26.0" prefWidth="89.0" text="Save photo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="170.0" prefHeight="26.0" prefWidth="122.0" text="Change photo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="225.0" prefHeight="26.0" prefWidth="105.0" text="Delete photo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressIndicator fx:id="saveProgressIndicator" layoutX="876.0" layoutY="71.0" prefHeight="40.0" prefWidth="40.0" styleClass="progress-bar" stylesheets="@../styles/app-style.css" visible="false" />
+   </children>
+</AnchorPane>
